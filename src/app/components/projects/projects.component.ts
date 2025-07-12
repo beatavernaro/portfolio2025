@@ -9,34 +9,41 @@ import { CommonModule } from '@angular/common';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  // Static texts
+  texts = {
+    sectionTitle: 'My Projects',
+    viewCode: 'View Code',
+    liveDemo: 'Live Demo'
+  };
+
   projects = [
     {
-      title: 'Sistema de Gestão Empresarial',
-      description: 'Aplicação completa para gestão de pequenas e médias empresas, desenvolvida com .NET Core e Angular.',
+      title: 'Enterprise Management System',
+      description: 'Complete application for small and medium business management, developed with .NET Core and Angular.',
       image: 'assets/project1.svg',
       technologies: ['.NET Core', 'Angular', 'SQL Server', 'Bootstrap'],
       githubUrl: 'https://github.com',
       liveUrl: 'https://demo.com'
     },
     {
-      title: 'E-commerce Responsivo',
-      description: 'Plataforma de vendas online com design responsivo e integração com gateways de pagamento.',
+      title: 'Responsive E-commerce',
+      description: 'Online sales platform with responsive design and payment gateway integration.',
       image: 'assets/project1.svg',
       technologies: ['Angular', 'TypeScript', 'Material UI', 'Node.js'],
       githubUrl: 'https://github.com',
       liveUrl: 'https://demo.com'
     },
     {
-      title: 'API de Microserviços',
-      description: 'Arquitetura de microserviços escalável para aplicações enterprise com .NET Core.',
+      title: 'Microservices API',
+      description: 'Scalable microservices architecture for enterprise applications with .NET Core.',
       image: 'assets/project1.svg',
       technologies: ['.NET Core', 'Docker', 'Azure', 'SQL Server'],
       githubUrl: 'https://github.com',
       liveUrl: null
     },
     {
-      title: 'Dashboard Analytics',
-      description: 'Painel de controle interativo para visualização de dados em tempo real.',
+      title: 'Analytics Dashboard',
+      description: 'Interactive control panel for real-time data visualization.',
       image: 'assets/project1.svg',
       technologies: ['Angular', 'Chart.js', 'RxJS', 'Material Design'],
       githubUrl: 'https://github.com',

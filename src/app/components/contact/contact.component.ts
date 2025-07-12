@@ -14,6 +14,47 @@ export class ContactComponent implements OnInit {
   isSubmitting = false;
   showSuccessMessage = false;
 
+  // Static texts
+  texts = {
+    sectionTitle: "Let's Talk?",
+    sectionSubtitle: "Get in touch to discuss your next project",
+    email: "Email",
+    emailValue: "contact@beatriz.dev",
+    sendEmail: "Send email",
+    linkedin: "LinkedIn", 
+    linkedinDescription: "Let's connect",
+    viewProfile: "View profile",
+    github: "GitHub",
+    githubDescription: "Check out my projects", 
+    viewRepositories: "View repositories",
+    location: "Location",
+    locationValue: "São Paulo, SP - Brazil",
+    remoteAvailable: "Available for remote work",
+    followMe: "Follow me on social media",
+    contactForm: {
+      title: "Send me a message",
+      name: "Name",
+      namePlaceholder: "Your name",
+      nameRequired: "Name is required",
+      nameMinLength: "Name must be at least 2 characters",
+      email: "Email",
+      emailPlaceholder: "your@email.com",
+      emailRequired: "Email is required", 
+      emailInvalid: "Please enter a valid email",
+      subject: "Subject",
+      subjectPlaceholder: "What is this about?",
+      subjectRequired: "Subject is required",
+      subjectMinLength: "Subject must be at least 5 characters",
+      message: "Message",
+      messagePlaceholder: "Tell me about your project...",
+      messageRequired: "Message is required",
+      messageMinLength: "Message must be at least 10 characters",
+      sending: "Sending...",
+      send: "Send Message",
+      successMessage: "Message sent successfully! I'll get back to you soon."
+    }
+  };
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
@@ -29,7 +70,7 @@ export class ContactComponent implements OnInit {
     if (this.contactForm.valid) {
       this.isSubmitting = true;
       
-      // Simula envio do formulário
+      // Simulate form submission
       setTimeout(() => {
         this.isSubmitting = false;
         this.showSuccessMessage = true;
@@ -40,7 +81,7 @@ export class ContactComponent implements OnInit {
         }, 5000);
       }, 2000);
     } else {
-      // Marca todos os campos como touched para mostrar erros
+      // Mark all fields as touched to show errors
       Object.keys(this.contactForm.controls).forEach(key => {
         this.contactForm.get(key)?.markAsTouched();
       });

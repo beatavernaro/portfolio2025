@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+  // Static texts
+  texts = {
+    greeting: 'Hello, I\'m',
+    name: 'Bea',
+    title: 'Full Stack Developer',
+    description: 'Passionate about creating innovative solutions with .NET and Angular. I transform ideas into robust and scalable digital experiences.',
+    viewProjects: 'View Projects',
+    contactMe: 'Contact Me'
+  };
+
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {

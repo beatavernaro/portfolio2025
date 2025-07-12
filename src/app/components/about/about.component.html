@@ -2,27 +2,16 @@
   <div class="content">
     <div class="about-content">
       <div class="about-section">
-        <h2>Sobre mim</h2>
+        <h2>{{ texts.aboutTitle }}</h2>
         <div class="text-content">
-          <p>
-            Sou uma desenvolvedora full stack apaixonada por tecnologia e inovação. 
-            Com mais de 3 anos de experiência, especializo-me em criar soluções robustas 
-            e escaláveis utilizando .NET e Angular.
-          </p>
-          <p>
-            Minha jornada começou com curiosidade e se transformou em uma paixão genuína 
-            por resolver problemas complexos através do código. Acredito que a tecnologia 
-            deve servir às pessoas, sempre buscando criar experiências que façam a diferença.
-          </p>
-          <p>
-            Atualmente trabalho como desenvolvedora sênior, onde lidero projetos técnicos 
-            e mentoro desenvolvedores juniores, sempre focada em boas práticas e código limpo.
+          <p *ngFor="let paragraph of texts.aboutDescription">
+            {{ paragraph }}
           </p>
         </div>
       </div>
 
       <div class="technologies-section">
-        <h2>Tecnologias</h2>
+        <h2>{{ texts.technologiesTitle }}</h2>
         <div class="tech-tags">
           <span class="tech-tag" *ngFor="let skill of skills">{{ skill.name }}</span>
         </div>

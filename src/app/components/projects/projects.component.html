@@ -1,7 +1,7 @@
 <div class="projects-container">
   <div class="container">
     <div class="section-header">
-      <h2>Meus Projetos</h2>
+      <h2>{{ texts.sectionTitle }}</h2>
     </div>
 
     <div class="projects-list">
@@ -18,11 +18,11 @@
         <div class="project-actions">
           <a [href]="project.liveUrl" target="_blank" class="btn-action" *ngIf="project.liveUrl">
             <i class="fas fa-external-link-alt"></i>
-            <span>Ver Projeto</span>
+            <span>{{ texts.liveDemo }}</span>
           </a>
           <a [href]="project.githubUrl" target="_blank" class="btn-action btn-secondary" *ngIf="project.githubUrl">
             <i class="fab fa-github"></i>
-            <span>Código</span>
+            <span>{{ texts.viewCode }}</span>
           </a>
         </div>
       </div>

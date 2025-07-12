@@ -11,6 +11,15 @@ import { Router } from '@angular/router';
 export class NavigationComponent {
   isMenuOpen = false;
 
+  // Static texts
+  texts = {
+    home: 'Home',
+    about: 'About Me',
+    projects: 'Projects',
+    articles: 'Articles & Talks',
+    resume: 'Resume'
+  };
+
   constructor(private router: Router) {}
 
   toggleMenu() {
@@ -18,19 +27,19 @@ export class NavigationComponent {
   }
 
   scrollToSection(sectionId: string) {
-    // Fechar o menu mobile se estiver aberto
+    // Close mobile menu if it's open
     this.isMenuOpen = false;
     
-    // Se não estiver na home, navegar para a home primeiro
+    // If not on home page, navigate to home first
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
-        // Aguardar um momento para a página carregar antes de fazer o scroll
+        // Wait a moment for the page to load before scrolling
         setTimeout(() => {
           this.performScroll(sectionId);
         }, 100);
       });
     } else {
-      // Já está na home, fazer scroll diretamente
+      // Already on home, scroll directly
       this.performScroll(sectionId);
     }
   }

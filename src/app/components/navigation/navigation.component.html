@@ -6,19 +6,19 @@
     
     <ul class="nav-menu" [class.active]="isMenuOpen">
       <li class="nav-item">
-        <a (click)="scrollToSection('home')" class="nav-link">Início</a>
+        <a (click)="scrollToSection('home')" class="nav-link">{{ texts.home }}</a>
       </li>
       <li class="nav-item">
-        <a (click)="scrollToSection('about')" class="nav-link">Sobre mim</a>
+        <a (click)="scrollToSection('about')" class="nav-link">{{ texts.about }}</a>
       </li>
       <li class="nav-item">
-        <a (click)="scrollToSection('projects')" class="nav-link">Projetos</a>
+        <a (click)="scrollToSection('projects')" class="nav-link">{{ texts.projects }}</a>
       </li>
       <li class="nav-item">
-        <a (click)="scrollToSection('articles')" class="nav-link">Artigos & Palestras</a>
+        <a (click)="scrollToSection('articles')" class="nav-link">{{ texts.articles }}</a>
       </li>
       <li class="nav-item">
-        <a href="/assets/cv.pdf" target="_blank" class="nav-link cv-link">Currículo</a>
+        <a href="/assets/cv.pdf" target="_blank" class="nav-link cv-link">{{ texts.resume }}</a>
       </li>
     </ul>
 

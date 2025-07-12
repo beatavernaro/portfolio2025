@@ -9,64 +9,47 @@ import { CommonModule } from '@angular/common';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
+  // Static texts
+  texts = {
+    aboutTitle: 'About Me',
+    technologiesTitle: 'Technologies',
+    aboutDescription: [
+      'I am a passionate full-stack developer with expertise in technology and innovation. With over 3 years of experience, I specialize in creating robust and scalable solutions using .NET and Angular.',
+      'My journey began with curiosity and transformed into a genuine passion for solving complex problems through code. I believe technology should serve people, always seeking to create experiences that make a difference.',
+      'Currently working as a senior developer, where I lead technical projects and mentor junior developers, always focused on best practices and clean code.'
+    ]
+  };
+
   skills = [
     {
       name: '.NET Core',
-      description: 'APIs e aplicações backend',
+      description: 'Backend APIs and applications',
       icon: 'fab fa-microsoft'
     },
     {
       name: 'Angular',
-      description: 'Aplicações frontend modernas',
+      description: 'Modern frontend applications',
       icon: 'fab fa-angular'
     },
     {
       name: 'TypeScript',
-      description: 'Desenvolvimento type-safe',
+      description: 'Type-safe development',
       icon: 'fab fa-js-square'
     },
     {
       name: 'SQL Server',
-      description: 'Banco de dados e otimização',
+      description: 'Database and optimization',
       icon: 'fas fa-database'
     },
     {
       name: 'Azure',
-      description: 'Cloud e DevOps',
+      description: 'Cloud and DevOps',
       icon: 'fab fa-microsoft'
     },
     {
       name: 'Git',
-      description: 'Controle de versão',
+      description: 'Version control',
       icon: 'fab fa-git-alt'
-    }
-  ];
-
-  stats = [
-    { number: '3+', label: 'Anos de Experiência' },
-    { number: '20+', label: 'Projetos Concluídos' },
-    { number: '5+', label: 'Tecnologias Dominadas' },
-    { number: '100%', label: 'Comprometimento' }
-  ];
-
-  experience = [
-    {
-      period: '2022 - Presente',
-      position: 'Desenvolvedora Full Stack Sênior',
-      company: 'Tech Company',
-      description: 'Desenvolvimento de aplicações web com .NET e Angular, liderança técnica e mentoria.'
-    },
-    {
-      period: '2021 - 2022',
-      position: 'Desenvolvedora Full Stack',
-      company: 'Startup Inovadora',
-      description: 'Criação de MVPs e soluções escaláveis, trabalho direto com stakeholders.'
-    },
-    {
-      period: '2020 - 2021',
-      position: 'Desenvolvedora Jr.',
-      company: 'Empresa de Software',
-      description: 'Início da carreira, desenvolvimento de funcionalidades e correção de bugs.'
     }
   ];
 }

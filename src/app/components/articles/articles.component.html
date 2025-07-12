@@ -1,9 +1,9 @@
 <div class="articles-container">
   <div class="container">
     <div class="section-header">
-      <h2>Artigos & Palestras</h2>
+      <h2>{{ texts.sectionTitle }}</h2>
     </div>
-    
+
     <div class="content-list" *ngIf="activeTab === 'articles'">
       <div class="content-item" *ngFor="let article of articles; let i = index">
         <div class="item-header">
@@ -37,7 +37,7 @@
           <div class="item-actions">
             <a [href]="article.url" target="_blank" class="btn-action">
               <i class="fas fa-external-link-alt"></i>
-              <span>Ler Artigo</span>
+              <span>{{ texts.readMore }}</span>
             </a>
           </div>
         </div>
@@ -75,11 +75,11 @@
           <div class="item-actions">
             <a [href]="talk.videoUrl" target="_blank" class="btn-action" *ngIf="talk.videoUrl">
               <i class="fas fa-play"></i>
-              <span>Assistir</span>
+              <span>{{ texts.watchVideo }}</span>
             </a>
             <a [href]="talk.slidesUrl" target="_blank" class="btn-action btn-secondary" *ngIf="talk.slidesUrl">
               <i class="fas fa-file-powerpoint"></i>
-              <span>Slides</span>
+              <span>{{ texts.viewSlides }}</span>
             </a>
           </div>
         </div>
