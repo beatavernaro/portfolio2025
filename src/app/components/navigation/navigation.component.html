@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <h3>Bea</h3>
+    </div>
+    
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li class="nav-item">
+        <a (click)="scrollToSection('home')" class="nav-link">Início</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollToSection('projects')" class="nav-link">Projetos</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollToSection('articles')" class="nav-link">Artigos & Palestras</a>
+      </li>
+      <li class="nav-item">
+        <a href="/assets/cv.pdf" target="_blank" class="nav-link cv-link">Currículo</a>
+      </li>
+    </ul>
+
+    <div class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>

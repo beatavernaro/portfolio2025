@@ -1,0 +1,139 @@
+<div class="contact-section">
+  <div class="section-content">
+    <div class="section-header">
+      <h2>Vamos Conversar?</h2>
+      <p>Entre em contato para discutirmos seu próximo projeto</p>
+    </div>
+
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4>Email</h4>
+            <p>contato&#64;beatriz.deV</p>
+            <a href="mailto:contato@beatriz.dev" class="contact-link">Enviar email</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <h4>LinkedIn</h4>
+            <p>Vamos nos conectar</p>
+            <a href="https://linkedin.com" target="_blank" class="contact-link">Ver perfil</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <h4>GitHub</h4>
+            <p>Confira meus projetos</p>
+            <a href="https://github.com" target="_blank" class="contact-link">Ver repositórios</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4>Localização</h4>
+            <p>São Paulo, SP - Brasil</p>
+            <span class="contact-link">Disponível para remoto</span>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <h4>Me siga nas redes</h4>
+          <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-container">
+          <h3>Envie uma mensagem</h3>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Nome completo</label>
+            <input 
+              type="text" 
+              id="name" 
+              formControlName="name"
+              placeholder="Seu nome"
+              [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+            <div class="error-message" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+              Nome é obrigatório
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email"
+              placeholder="seu.email@exemplo.com"
+              [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+            <div class="error-message" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+              Email válido é obrigatório
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input 
+              type="text" 
+              id="subject" 
+              formControlName="subject"
+              placeholder="Sobre o que você gostaria de conversar?"
+              [class.error]="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+            <div class="error-message" *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+              Assunto é obrigatório
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea 
+              id="message" 
+              formControlName="message"
+              placeholder="Conte-me mais sobre seu projeto ou como posso ajudar..."
+              rows="5"
+              [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+            </textarea>
+            <div class="error-message" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+              Mensagem é obrigatória
+            </div>
+          </div>
+
+            <button 
+              type="submit" 
+              class="submit-btn"
+              [disabled]="contactForm.invalid || isSubmitting">
+              <span *ngIf="!isSubmitting">Enviar mensagem</span>
+              <span *ngIf="isSubmitting">Enviando...</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <div class="success-message" *ngIf="showSuccessMessage">
+            <i class="fas fa-check-circle"></i>
+            <p>Mensagem enviada com sucesso! Entrarei em contato em breve.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

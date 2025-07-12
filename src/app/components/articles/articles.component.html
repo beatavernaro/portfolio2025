@@ -1,0 +1,89 @@
+<div class="articles-container">
+  <div class="container">
+    <div class="section-header">
+      <h2>Artigos & Palestras</h2>
+    </div>
+    
+    <div class="content-list" *ngIf="activeTab === 'articles'">
+      <div class="content-item" *ngFor="let article of articles; let i = index">
+        <div class="item-header">
+          <div class="item-icon">
+            <i class="fas fa-newspaper"></i>
+          </div>
+          
+          <div class="item-info">
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.description }}</p>
+          </div>
+        </div>
+        
+        <div class="item-footer">
+          <div class="item-tags">
+            <div class="meta-tags">
+              <span class="meta-item">
+                <i class="fas fa-calendar"></i>
+                {{ article.date }}
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-globe"></i>
+                {{ article.platform }}
+              </span>
+            </div>
+            <div class="tech-tags">
+              <span class="tag" *ngFor="let tag of article.tags">{{ tag }}</span>
+            </div>
+          </div>
+          
+          <div class="item-actions">
+            <a [href]="article.url" target="_blank" class="btn-action">
+              <i class="fas fa-external-link-alt"></i>
+              <span>Ler Artigo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-list" *ngIf="activeTab === 'talks'">
+      <div class="content-item" *ngFor="let talk of talks; let i = index">
+        <div class="item-header">
+          <div class="item-icon">
+            <i class="fas fa-microphone"></i>
+          </div>
+          
+          <div class="item-info">
+            <h3>{{ talk.title }}</h3>
+            <p>{{ talk.description }}</p>
+          </div>
+        </div>
+        
+        <div class="item-footer">
+          <div class="item-tags">
+            <div class="meta-tags">
+              <span class="meta-item">
+                <i class="fas fa-calendar"></i>
+                {{ talk.date }}
+              </span>
+              <span class="meta-item">
+                <i class="fas fa-map-marker-alt"></i>
+                {{ talk.event }}
+              </span>
+            </div>
+            <!-- As palestras não têm tags de tecnologia no momento -->
+          </div>
+          
+          <div class="item-actions">
+            <a [href]="talk.videoUrl" target="_blank" class="btn-action" *ngIf="talk.videoUrl">
+              <i class="fas fa-play"></i>
+              <span>Assistir</span>
+            </a>
+            <a [href]="talk.slidesUrl" target="_blank" class="btn-action btn-secondary" *ngIf="talk.slidesUrl">
+              <i class="fas fa-file-powerpoint"></i>
+              <span>Slides</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
