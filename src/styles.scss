@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+// Coffee-inspired color palette
+:root {
+  --bg-primary: #e6dfd2;      // Light cream background
+  --accent-primary: #ce8651;   // Warm coffee brown
+  --accent-secondary: #ab7a66; // Medium coffee brown
+  --accent-dark: #89543d;      // Dark coffee brown
+  --text-primary: #3d2b1f;     // Dark brown for text
+  --text-secondary: #6b4a3a;   // Medium brown for secondary text
+  --text-light: #8b6f63;      // Light brown for muted text
+  --card-bg: #ffffff;          // Pure white for cards
+  --border-color: #d4c4b0;     // Light brown for borders
+}
+
 // Reset e configurações globais para evitar problemas de scaling
 * {
   box-sizing: border-box;
@@ -22,46 +35,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem !important;
   line-height: 1.5 !important;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 // Garantir que elementos mantêm tamanho correto
 .mat-typography {
   font-size: 1rem !important;
 }
-
-// Custom dark theme colors with feminine touch
-$custom-primary: (
-  50: #f3e5f5,
-  100: #e1bee7,
-  200: #ce93d8,
-  300: #ba68c8,
-  400: #ab47bc,
-  500: #9c27b0,
-  600: #8e24aa,
-  700: #7b1fa2,
-  800: #6a1b9a,
-  900: #4a148c,
-  A100: #ea80fc,
-  A200: #e040fb,
-  A400: #d500f9,
-  A700: #aa00ff,
-  contrast: (
-    50: rgba(black, 0.87),
-    100: rgba(black, 0.87),
-    200: rgba(black, 0.87),
-    300: white,
-    400: white,
-    500: white,
-    600: white,
-    700: white,
-    800: white,
-    900: white,
-    A100: rgba(black, 0.87),
-    A200: white,
-    A400: white,
-    A700: white,
-  )
-);
 
 // Global styles
 * {
@@ -96,8 +77,8 @@ html, body {
 body { 
   margin: 0; 
   font-family: 'Roboto', 'Helvetica Neue', sans-serif; 
-  background-color: #121212;
-  color: #ffffff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
@@ -107,16 +88,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: var(--border-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #9c27b0;
+  background: var(--accent-primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ab47bc;
+  background: var(--accent-secondary);
 }
 
 // Section styling
@@ -148,25 +129,28 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   font-weight: 300;
+  color: var(--text-primary);
 }
 
 h1 {
   font-size: 3.5rem;
   font-weight: 100;
+  color: var(--accent-dark);
 }
 
 h2 {
   font-size: 2.5rem;
-  color: #9c27b0;
+  color: var(--accent-primary);
 }
 
 h3 {
   font-size: 2rem;
+  color: var(--accent-secondary);
 }
 
 p {
   margin-bottom: 1rem;
-  color: #e0e0e0;
+  color: var(--text-secondary);
 }
 
 // Responsive design
