@@ -1,19 +1,30 @@
 <div class="about-container">
   <div class="content">
     <div class="about-content">
+      <div class="technologies-section">
+        <div class="tech-columns">
+          <div class="tech-column">
+            <h3>{{ texts.technologiesTitle }}</h3>
+            <div class="tech-tags">
+              <span class="tech-tag" *ngFor="let skill of technicalSkills">{{ skill.name }}</span>
+            </div>
+          </div>
+          
+          <div class="tech-column">
+            <h3>{{ texts.certificationsTitle }}</h3>
+            <div class="tech-tags">
+              <span class="tech-tag" *ngFor="let cert of certifications">{{ cert.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="about-section">
         <h2>{{ texts.aboutTitle }}</h2>
         <div class="text-content">
           <p *ngFor="let paragraph of texts.aboutDescription">
             {{ paragraph }}
           </p>
-        </div>
-      </div>
-
-      <div class="technologies-section">
-        <h2>{{ texts.technologiesTitle }}</h2>
-        <div class="tech-tags">
-          <span class="tech-tag" *ngFor="let skill of skills">{{ skill.name }}</span>
         </div>
       </div>
     </div>

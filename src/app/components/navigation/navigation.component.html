@@ -1,7 +1,9 @@
 <nav class="navbar">
   <div class="nav-container">
     <div class="nav-brand">
-      <h3>Bea</h3>
+      <a (click)="scrollToSection('home')" class="brand-link">
+        <h3>Bea</h3>
+      </a>
     </div>
     
     <ul class="nav-menu" [class.active]="isMenuOpen">

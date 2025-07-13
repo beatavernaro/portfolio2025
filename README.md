@@ -1,107 +1,116 @@
-# 💜 Portfólio Pessoal - Beatriz
+# 💜 Personal Portfolio - Beatriz
 
-Um portfólio moderno e responsivo desenvolvido com Angular para uma desenvolvedora full stack especializada em .NET e Angular.
+A modern and responsive portfolio developed with Angular for a full stack developer specialized in .NET and Angular.
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
-- **Angular 17** - Framework frontend
-- **Angular Material** - Componentes de UI
-- **TypeScript** - Linguagem de programação
-- **SCSS** - Pré-processador CSS
-- **Font Awesome** - Ícones
+- **Angular 17** - Frontend framework
+- **Angular Material** - UI components
+- **TypeScript** - Programming language
+- **SCSS** - CSS preprocessor
+- **Font Awesome** - Icons
 - **Angular SSR** - Server-Side Rendering
 
-## 🎨 Características do Design
+## 🎨 Design Features
 
-- **Tema Dark** - Design moderno com fundo escuro
-- **Paleta Feminina** - Tons de roxo e rosa para um toque elegante
-- **One-Page Layout** - Todas as seções em uma única página
-- **Navegação Suave** - Scroll suave entre seções
-- **Responsivo** - Compatível com dispositivos móveis
-- **Animações** - Transições e efeitos suaves
+- **Dark Theme** - Modern design with dark background
+- **Feminine Palette** - Purple and pink tones for an elegant touch
+- **One-Page Layout** - All sections on a single page
+- **Smooth Navigation** - Smooth scroll between sections
+- **Responsive** - Mobile device compatible
+- **Animations** - Smooth transitions and effects
 
-## 📱 Seções do Portfólio
+## 📱 Portfolio Sections
 
-1. **Hero/Início** - Apresentação principal
-2. **Sobre Mim** - Experiência e habilidades
-3. **Projetos** - Showcase de trabalhos
-4. **Artigos & Palestras** - Conteúdos e apresentações
-5. **Contato** - Formulário e informações de contato
+1. **Hero/Home** - Main presentation
+2. **About Me** - Experience and skills
+3. **Projects** - Work showcase
+4. **Articles & Talks** - Content and presentations
+5. **Contact** - Form and contact information
 
-## 🛠️ Como Executar
+## 🛠️ How to Run
 
-### Pré-requisitos
+### Prerequisites
 - Node.js 18+
 - Angular CLI 17+
 
-### Instalação
+### Installation
 ```bash
-# Clone o repositório
-git clone [URL_DO_REPOSITORIO]
+# Clone the repository
+git clone https://github.com/beatavernaro/portfolio2025.git
 
-# Navegue até o diretório
-cd portfolio
+# Navigate to the directory
+cd portfolio2025
 
-# Instale as dependências
+# Install dependencies
 npm install
 
-# Execute o servidor de desenvolvimento
+# Run the development server
 ng serve
 
-# Acesse http://localhost:4200
+# Access http://localhost:4200
 ```
 
-### Build para Produção
+### Production Build
 ```bash
-# Build otimizado
+# Optimized build
 ng build --configuration production
 
-# Os arquivos serão gerados na pasta dist/
+# Files will be generated in the dist/ folder
 ```
 
-## 🎯 Funcionalidades
+## 🎯 Features
 
-- ✅ Navegação fixa no topo
-- ✅ Scroll suave entre seções
-- ✅ Design responsivo
-- ✅ Tema dark customizado
-- ✅ Animações CSS
-- ✅ Componentes modulares
-- ✅ TypeScript com tipagem forte
-- ✅ SSR habilitado
+- ✅ Fixed top navigation
+- ✅ Smooth scroll between sections
+- ✅ Responsive design
+- ✅ Custom dark theme
+- ✅ CSS animations
+- ✅ Modular components
+- ✅ TypeScript with strong typing
+- ✅ SSR enabled
+- ✅ GitHub Actions deployment
+- ✅ Centralized text management
 
-## 📄 Estrutura do Projeto
+## 📄 Project Structure
 
 ```
 src/
 ├── app/
 │   ├── components/
-│   │   ├── navigation/     # Menu de navegação
-│   │   ├── hero/          # Seção principal
-│   │   ├── about/         # Sobre mim
-│   │   ├── projects/      # Projetos
-│   │   ├── articles/      # Artigos e palestras
-│   │   └── contact/       # Contato
-│   ├── app.component.*    # Componente raiz
-│   └── app.config.ts      # Configurações
-├── assets/                # Recursos estáticos
-└── styles.scss           # Estilos globais
+│   │   ├── navigation/     # Navigation menu
+│   │   ├── hero/          # Main section
+│   │   ├── about/         # About me
+│   │   ├── projects/      # Projects
+│   │   ├── articles/      # Articles and talks
+│   │   ├── contact/       # Contact
+│   │   └── footer/        # Footer
+│   ├── app.component.*    # Root component
+│   └── app.config.ts      # Configurations
+├── assets/                # Static resources
+└── styles.scss           # Global styles
 ```
 
 ## 🚀 Deploy
 
-O projeto está configurado para deploy em:
+The project is configured for deployment on:
+- **GitHub Pages** (currently deployed)
 - **Vercel**
 - **Netlify**
 - **Azure Static Web Apps**
 - **Firebase Hosting**
 
-## 📧 Contato
+## 📧 Contact
 
-- **Email**: [seu-email@example.com]
-- **LinkedIn**: [seu-linkedin]
-- **GitHub**: [seu-github]
+- **Email**: betavernaro.dev@gmail.com
+- **LinkedIn**: [beatriz-tavernaro](https://linkedin.com/in/beatriz-tavernaro/)
+- **GitHub**: [beatavernaro](https://github.com/beatavernaro)
+- **Microsoft MVP**: [Student Ambassador Profile](https://mvp.microsoft.com/en-US/studentambassadors/profile/5fe90cb3-bfb3-464f-99b3-87f705e7dc07)
+
+## 🌐 Live Demo
+
+Visit the live portfolio: [https://beatavernaro.github.io/portfolio2025/](https://beatavernaro.github.io/portfolio2025/)
 
 ---
 
-Desenvolvido com 💜 por Beatriz
+Developed with 💜 by Beatriz - Curious by nature. Always learning. Always building.

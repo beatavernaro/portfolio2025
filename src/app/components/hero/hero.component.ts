@@ -27,4 +27,8 @@ export class HeroComponent {
       });
     }
   }
+
+  openLinkedIn() {
+    window.open('https://www.linkedin.com/in/beatriz-tavernaro/', '_blank');
+  }
 }
