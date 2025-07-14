@@ -18,11 +18,19 @@ export class ProjectsComponent {
 
   projects = [
     {
-      title: 'HomeLib',
-      description: 'RESTful API built with .NET to manage a personal library — including books, authors, categories, and more. Focused on clean architecture and best coding practices.',
+      title: 'Booking Manager',
+      description: 'A RESTful API for managing medical appointments, allowing patients to schedule, view, and cancel consultations.',
       image: 'assets/project1.svg',
-      technologies: ['.NET', 'RESTful API', 'Clean Architecture', 'C#'],
-      githubUrl: 'https://github.com/beatavernaro/HomeLib',
+      technologies: ['.NET', 'RESTful API', 'C#'],
+      githubUrl: 'https://github.com/beatavernaro/BookingManager',
+      liveUrl: null
+    },
+    {
+      title: 'Booking Manager Worker',
+      description: 'A .NET 8 Worker Service that automatically monitors appointments in the database and sends confirmation reminders to clients.',
+      image: 'assets/project1.svg',
+      technologies: ['.NET', 'C#', 'Worker Services'],
+      githubUrl: 'https://github.com/beatavernaro/BookingManagerWorker',
       liveUrl: null
     },
     {
